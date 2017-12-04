@@ -167,11 +167,75 @@
                   Voltage Graph
                   <small>Watch voltage</small>
               </h3>
+              <canvas id="line-chart-voltage" width="800" height="450"></canvas>
+              <script>
+              new Chart(document.getElementById("line-chart-voltage"), {
+                  type: 'line',
+                  data: {
+                    labels: [10,10.5,11,11.5,12,12.5,13,13.5,14,14.5],
+                    datasets: [{
+                        data: [10,10.5,11,11.5,12,12.5,13,13.5,14,14.5],
+                        label: "Voltage in",
+                        borderColor: "#3e95cd",
+                        fill: false
+                      }, {
+                        data: [12,12.5,12,12,12,12,12,12,12,12],
+                        label: "Battery voltage",
+                        borderColor: "#8e5ea2",
+                        fill: false
+                      }, {
+                        data: [11, 11, 11, 11, 11, 0, 0, 0, 0, 0, ],
+                        label: "Voltage out",
+                        borderColor: "#3cba9f",
+                        fill: false
+                      }
+                    ]
+                  },
+                  options: {
+                    title: {
+                      display: true,
+                      text: 'Voltage'
+                    }
+                  }
+                });
+                </script>
             </div>
             <div class="col-lg-6 col-md-6 col-xs-12">
                 <h3>
                   Electricity Current Graph
                   <small>Watch current</small>
+                  <canvas id="line-chart-current" width="800" height="450"></canvas>
+                  <script>
+                  new Chart(document.getElementById("line-chart-current"), {
+                      type: 'line',
+                      data: {
+                        labels: [0,0.5,1,1.5,2,2.5,3],
+                        datasets: [{
+                            data: [1,1,1.25,1.5,1.75,2,3],
+                            label: "Current in",
+                            borderColor: "#3e95cd",
+                            fill: false
+                          }, {
+                            data: [-2,-2,-1,0,1,2,3],
+                            label: "Battery current",
+                            borderColor: "#8e5ea2",
+                            fill: false
+                          }, {
+                            data: [3,3,3,3,3,2,0],
+                            label: "Current out",
+                            borderColor: "#3cba9f",
+                            fill: false
+                          }
+                        ]
+                      },
+                      options: {
+                        title: {
+                          display: true,
+                          text: 'Current'
+                        }
+                      }
+                    });
+                    </script>
               </h3>
             </div>
         </div>
