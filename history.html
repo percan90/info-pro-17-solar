@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Settings | Info-Pro-17-Solar</title>
+  <title>History | Info-Pro-17-Solar</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap CSS -->
@@ -17,6 +17,13 @@
   <link rel="stylesheet" href="css/skin-yellow.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.bundle.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.js"></script>
+  <!-- JS included here - resolve conflicts -->
+  <script type="text/javascript" src="js/jquery.js"></script>
+  <script type="text/javascript" src="js/jquery-ui.js"></script>
+  <script type="text/javascript" src="js/moment.js"></script>
+  <script type="text/javascript" src="js/bootstrap.js"></script>
+  <script type="text/javascript" src="js/bootstrap-datetimepicker.js"></script>
+  <link rel="stylesheet" href="css/bootstrap-datetimepicker.css" />
 </head>
 <body class="hold-transition skin-yellow sidebar-mini">
 <div class="wrapper">
@@ -93,12 +100,35 @@
     </section>
 
     <!-- Main content -->
-    <section class="content">
+    <!-- <section class="content">
         <div class="container-settings">
 
-
         </div>
-    </section>
+    </section> -->
+
+    <div class="content">
+        <div class="container-settings">
+        <div class="row">
+            <div class='col-lg-4 col-md-3 col-xs-12'>
+                <h3>Choose date<br>
+                <small>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</small></h3>
+                <div class="form-group">
+                    <div class='input-group date' id='datetimepicker1'>
+                        <input type='text' class="form-control" />
+                        <span class="input-group-addon">
+                            <span class="glyphicon glyphicon-calendar"></span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <script type="text/javascript">
+                $(function () {
+                    $('#datetimepicker1').datetimepicker();
+                });
+            </script>
+        </div>
+    </div>
+    </div>
 
   </div>
   <!-- /.content-wrapper -->
@@ -109,14 +139,6 @@
     <strong>Copyright &copy; 2017 <a href="#">Solar</a>.</strong> All rights reserved.
   </footer>
 
-
-<!-- jQuery -->
-<script src="js/jquery.js"></script>
-<!-- jQuery UI 1.11.4 -->
-<script src="js/jquery-ui.js"></script>
-<!-- Bootstrap -->
-<script src="js/bootstrap.js"></script>
-<!-- AdminLTE App -->
 <script src="js/solar.js"></script>
 </body>
 </html>
